@@ -1,0 +1,747 @@
+/* Global Styles */
+body {
+    background-color: #ebe6e6;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: #f5f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    color: #ca1111;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #555;
+}
+
+/* Header Section */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 15px 30px;
+}
+
+/* Logo Styling */
+.header .logo {
+    font-size: 1.8rem;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Navigation Menu Styling */
+.header nav {
+    display: flex;
+}
+
+.header .nav-list {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.header .nav-list li {
+    margin-right: 30px;
+}
+
+.header .nav-list a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.header .nav-list a:hover {
+    color: #00bcd4;
+}
+
+
+/* Hero Section */
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Full viewport height */
+    background: url('img/your-background-image.jpg') no-repeat center center/cover;
+    background-size: cover;
+    position: relative;
+    padding: 0 20px;
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+}
+
+.hero .hero-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    z-index: 2;
+}
+
+.hero-text {
+    flex: 1;
+    margin-right: 30px;
+    max-width: 500px;
+}
+
+.hero-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+.hero-text .btn {
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    background-color: #ff5733;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.hero-text .btn:hover {
+    background-color: #d94e2a;
+    transform: scale(1.05);
+}
+
+.hero-image {
+    flex: 1;
+    max-width: 500px;
+    margin-left: 30px;
+}
+
+.hero-img {
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.4s ease-in-out;
+}
+
+.hero-img:hover {
+    transform: scale(1.1);
+}
+
+/* Optional - Add a fade-in animation to the section */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.hero {
+    animation: fadeIn 1s ease-out;
+}
+
+//* About Me Section */
+.about {
+    padding: 50px 20px;
+    background-color: #f7f7f7; /* Soft background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 30px; /* Space between text and GIF */
+}
+
+.about-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.about-img {
+    width: 100%;
+    max-width: 350px; /* Set max size for the GIF */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for a polished look */
+}
+
+.about-text {
+    flex: 2;
+}
+
+.about-text h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.about-text p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #555;
+    margin-top: 20px;
+}
+
+/* Hover effect for the text */
+.about-text h2:hover {
+    color: #4a90e2; /* Accent color */
+    text-decoration: underline;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+    }
+
+    .about-img {
+        max-width: 90%; /* Adjust size for smaller screens */
+    }
+
+    .about-text h2 {
+        font-size: 2rem;
+    }
+
+    .about-text p {
+        font-size: 1rem;
+    }
+}
+
+
+/* Qualification Section */
+.qualification {
+    background: linear-gradient(135deg, #e0e0e0, #ffffff);
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.qualification-content {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.qualification h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.qualification ul {
+    list-style-type: none; /* Remove default bullets */
+    padding: 0;
+}
+
+.qualification li {
+    font-size: 20px;
+    margin: 15px 0;
+    color: black;
+    position: relative;
+    padding-left: 25px;
+    text-align: left;
+}
+
+.qualification li::before {
+    content: "🎓"; /* Little icon before each qualification */
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+
+
+
+/* Skills Section */
+.skills {
+    background-color: #f9f9f9;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.skills h2 {
+    font-size: 36px;
+    color: black;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+.skills-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.skills-list {
+    list-style: none;
+    padding: 0;
+    font-size: 20px;
+    color: black;
+}
+
+.skills-list li {
+    margin-bottom: 15px;
+    background: #ffffff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: background 0.3s, transform 0.3s;
+}
+
+.skills-list li:hover {
+    background: #e0f7fa;
+    transform: translateY(-5px);
+}
+
+.skills-table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 500px;
+    color: black;
+    background: #ffffff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.skills-table th, .skills-table td {
+    padding: 15px 20px;
+    text-align: left;
+}
+
+.skills-table thead {
+    background-color: #00bcd4;
+    color: white;
+}
+
+.skills-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.skills-table tr:hover {
+    background-color: #b2ebf2;
+}
+
+
+/* Skills Section */
+.skills {
+    background-color: #f5f5f5;
+    padding: 80px 20px;
+    text-align: center;
+    color: #333;
+}
+
+/* Title */
+.skills h2 {
+    font-size: 40px;
+    color: #444;
+    margin-bottom: 50px;
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 20px;
+    border-bottom: 3px solid #00bcd4;
+}
+
+/* Skill Cards */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.skill-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+.skill-card i {
+    font-size: 50px;
+    color: #00bcd4;
+    margin-bottom: 15px;
+}
+
+.skill-card h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.skill-card p {
+    font-size: 18px;
+    color: #777;
+}
+
+/* Skills Table */
+.skills-table {
+    width: 100%;
+    margin-top: 50px;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.skills-table th, .skills-table td {
+    padding: 15px 20px;
+    text-align: left;
+    font-size: 18px;
+}
+
+.skills-table th {
+    background-color: #00bcd4;
+    color: white;
+    text-transform: uppercase;
+}
+
+.skills-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.skills-table tr:hover {
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+/* Icons Styling */
+.fab, .fas {
+    color: #00bcd4;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .skills-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+
+    .skills h2 {
+        font-size: 30px;
+    }
+}
+
+
+/* Projects Section Styling */
+.projects {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 900px;
+}
+
+.projects h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.project {
+    background: #fff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.project:hover {
+    transform: translateY(-10px);
+}
+
+.project h3 {
+    font-size: 1.8em;
+    color: #0073e6;
+}
+
+.project p {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.project-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0;
+    font-size: 1.1em;
+    color: #666;
+}
+
+.project-list li {
+    margin: 5px 0;
+}
+
+.project-link {
+    text-decoration: none;
+}
+
+.project-btn {
+    background-color: #0073e6;
+    color: #fff;
+    padding: 12px 25px;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.project-btn:hover {
+    background-color: #005bb5;
+}
+
+/* Contact Section */
+.contact {
+    background-color: #f5f5f5;
+    padding: 80px 20px;
+    text-align: center;
+    color: #333;
+}
+
+/* Title */
+.contact h2 {
+    font-size: 40px;
+    color: #444;
+    margin-bottom: 50px;
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 20px;
+    border-bottom: 3px solid #00bcd4;
+}
+
+/* Contact Cards Layout */
+.contact-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.contact-card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    text-align: center;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.contact-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.contact-card i {
+    font-size: 60px;
+    color: #00bcd4;
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+}
+
+.contact-card h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.contact-card p {
+    font-size: 18px;
+    color: #777;
+}
+
+/* Contact Section */
+/* General Section Styling */
+.contact {
+    background-color: #f5f5f5;
+    padding: 40px 15px;
+    text-align: center;
+}
+
+.contact-heading {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 30px;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Contact Container Styling */
+.contact-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Contact Card Styling */
+.contact-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Icon Styling */
+.contact-icon {
+    font-size: 2rem;
+    color: #4C9DFF;
+    margin-bottom: 10px;
+}
+
+/* Heading Styling for Cards */
+.contact-card h3 {
+    font-size: 1.25rem;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+/* Link Styling */
+.contact-link {
+    text-decoration: none;
+    color: #4C9DFF;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+    color: #1D72B8;
+}
+
+
+/* Footer */
+/* Footer Styling */
+.footer {
+    background: linear-gradient(135deg, #4C9DFF, #1D72B8);
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer Text Styling */
+.footer p {
+    font-size: 1rem;
+    margin: 10px 0;
+    font-weight: 400;
+}
+
+/* Social Icons Container */
+.social-links {
+    margin-top: 15px;
+}
+
+/* Individual Social Icon Styling */
+.social-icon {
+    font-size: 2rem;
+    color: #fff;
+    margin: 0 10px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #ffd700;
+    transform: scale(1.2);
+}
+
+/* Add additional styling for mobile responsiveness */
+@media (max-width: 768px) {
+    .footer p {
+        font-size: 0.9rem;
+    }
+
+    .social-icon {
+        font-size: 1.8rem;
+        margin: 0 8px;
+    }
+}
+
+
+/* Rule Conflict Example */
+p {
+    font-size: 16px; /* element selector */
+}
+
+.highlight {
+    font-size: 18px; /* class selector */
+}
+
+#special-paragraph {
+    font-size: 20px; /* ID selector */
+}
+
+/* 
+Explanation:
+ID selector (#special-paragraph) wins because it has higher specificity than class (.highlight) and element (p).
+*/
+
