@@ -19,47 +19,54 @@ p {
 }
 
 /* Header Section */
+/* Header Section Styling */
 .header {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Space between the logo and nav */
     align-items: center;
-    background-color: #333;
-    padding: 15px 30px;
+    padding: 10px 20px; /* Add some padding for better spacing */
+    position: fixed; /* Fixed position so it stays at the top */
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #100202; /* White background */
+    z-index: 1000; /* To ensure it stays on top */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Shadow effect for a clean look */
 }
 
-/* Logo Styling */
-.header .logo {
-    font-size: 1.8rem;
-    color: #fff;
+.logo {
+    font-size: 1.8em;
     font-weight: bold;
-    text-transform: uppercase;
+    color: #a90606; /* Dark color for logo */
 }
 
-/* Navigation Menu Styling */
-.header nav {
-    display: flex;
-}
-
-.header .nav-list {
+.nav-list {
     list-style: none;
     display: flex;
-    padding: 0;
-    margin: 0;
+    gap: 20px; /* Space between navigation items */
+    color: white;
 }
 
-.header .nav-list li {
-    margin-right: 30px;
+.nav-list li {
+    display: inline-block;
 }
 
-.header .nav-list a {
-    color: #fff;
+.nav-list a {
     text-decoration: none;
-    font-size: 1.1rem;
-    font-weight: bold;
+    color: #dedada; /* Dark color for links */
+    font-size: 1.1em;
+    padding: 8px 16px;
+    transition: color 0.3s, transform 0.3s;
 }
 
-.header .nav-list a:hover {
-    color: #00bcd4;
+.nav-list a:hover {
+    color: #0073e6; /* Blue color on hover */
+    transform: scale(1.1); /* Slightly enlarge the link on hover */
+}
+
+/* Add padding to the body to ensure the content doesn't get hidden under the header */
+body {
+    padding-top: 80px; /* Adjust according to the header's height */
 }
 
 
@@ -157,7 +164,7 @@ p {
     animation: fadeIn 1s ease-out;
 }
 
-//* About Me Section */
+/* About Me Section */
 .about {
     padding: 50px 20px;
     background-color: #f7f7f7; /* Soft background */
@@ -200,7 +207,7 @@ p {
 .about-text h2 {
     font-size: 2.5rem;
     font-weight: 600;
-    color: #333;
+    color: #e90707;
     margin-bottom: 15px;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -258,7 +265,7 @@ p {
 .qualification h2 {
     font-size: 32px;
     margin-bottom: 20px;
-    color: black;
+    color: #e90707;
 }
 
 .qualification ul {
@@ -369,7 +376,7 @@ p {
 /* Title */
 .skills h2 {
     font-size: 40px;
-    color: #444;
+    color: #e90707;
     margin-bottom: 50px;
     font-weight: 700;
     position: relative;
@@ -408,7 +415,7 @@ p {
 
 .skill-card h3 {
     font-size: 24px;
-    color: #333;
+    color: #e90707;;
     margin-bottom: 10px;
     font-weight: 600;
 }
@@ -419,58 +426,69 @@ p {
 }
 
 /* Skills Table */
-.skills-table {
-    width: 100%;
-    margin-top: 50px;
-    border-collapse: collapse;
-    border-radius: 10px;
-    overflow: hidden;
-    background-color: #fff;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+.skills {
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
 }
 
-.skills-table th, .skills-table td {
-    padding: 15px 20px;
+.skills h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #e90707;;
+}
+
+.skills-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.skills-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.skills-list li {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    font-weight: 500;
+}
+
+.skills-table {
+    width: 90%;
+    max-width: 600px;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.skills-table th,
+.skills-table td {
+    border: 1px solid #e0e0e0;
+    padding: 12px;
     text-align: left;
-    font-size: 18px;
 }
 
 .skills-table th {
-    background-color: #00bcd4;
-    color: white;
-    text-transform: uppercase;
-}
-
-.skills-table tr:nth-child(even) {
-    background-color: #f9f9f9;
-}
-
-.skills-table tr:hover {
     background-color: #f0f0f0;
-    cursor: pointer;
+    color: #555;
 }
 
-/* Icons Styling */
-.fab, .fas {
-    color: #00bcd4;
+.skills-table td {
+    color: #333;
 }
 
-/* Media Queries for responsiveness */
-@media (max-width: 768px) {
-    .skills-container {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-@media (max-width: 480px) {
-    .skills-container {
-        grid-template-columns: 1fr;
-    }
-
-    .skills h2 {
-        font-size: 30px;
-    }
-}
 
 
 /* Projects Section Styling */
@@ -486,7 +504,7 @@ p {
 .projects h2 {
     font-size: 2.5em;
     margin-bottom: 20px;
-    color: #333;
+    color: #e90707;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -505,7 +523,7 @@ p {
 }
 
 .project h3 {
-    font-size: 1.8em;
+    font-size: 1.2em;
     color: #0073e6;
 }
 
@@ -532,7 +550,7 @@ p {
 }
 
 .project-btn {
-    background-color: #0073e6;
+    background-color: #ff5733;
     color: #fff;
     padding: 12px 25px;
     font-size: 1.1em;
@@ -543,7 +561,7 @@ p {
 }
 
 .project-btn:hover {
-    background-color: #005bb5;
+    background-color: #d94e2a;
 }
 
 /* Contact Section */
@@ -557,7 +575,7 @@ p {
 /* Title */
 .contact h2 {
     font-size: 40px;
-    color: #444;
+    color: #e90707;;
     margin-bottom: 50px;
     font-weight: 700;
     position: relative;
@@ -678,7 +696,7 @@ p {
 /* Footer */
 /* Footer Styling */
 .footer {
-    background: linear-gradient(135deg, #4C9DFF, #1D72B8);
+    /* background: linear-gradient(135deg, #4C9DFF, #1D72B8); */
     color: #fff;
     padding: 30px 0;
     text-align: center;
@@ -687,14 +705,19 @@ p {
     bottom: 0;
     width: 100%;
     box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1);
+    background-color: #100202;
 }
 
 /* Footer Text Styling */
+
 .footer p {
     font-size: 1rem;
     margin: 10px 0;
     font-weight: 400;
+   
 }
+
+
 
 /* Social Icons Container */
 .social-links {
@@ -739,9 +762,4 @@ p {
 #special-paragraph {
     font-size: 20px; /* ID selector */
 }
-
-/* 
-Explanation:
-ID selector (#special-paragraph) wins because it has higher specificity than class (.highlight) and element (p).
-*/
 
